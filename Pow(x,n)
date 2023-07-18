@@ -1,0 +1,19 @@
+class Solution {
+public:
+    double  myPow(double x, int n) {
+        int m=10000000+7;
+        double z=100;
+        int ans=1;
+        while(n)
+        {
+                if(n&1)
+                {
+                        ans=(ans%m)*x;
+                }
+            x=(x*x)%z;
+            n>>1;
+        }
+        return ans;
+        
+    }
+};
